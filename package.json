@@ -1,17 +1,18 @@
 {
-  "name": "curso-node",
+  "name": "sequelize",
   "version": "1.0.0",
-  "description": "curso de node js",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon index.js"
+    "dev": "nodemon src/index.js"
   },
-  "author": "andersonfilipe",
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.18"
-  },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.4.1"
   }
 }
