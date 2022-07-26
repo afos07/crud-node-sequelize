@@ -34,6 +34,11 @@ module.exports = {
        const user = await User.update({nome, email}, {where:{id}});
        res.status(200).json(user);
     }
+  },
+
+  async read(req, res){
+    const users = await User.findAll();
+    res.status(200).json(users);
   }
 
 }
