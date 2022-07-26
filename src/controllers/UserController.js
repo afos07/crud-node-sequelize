@@ -39,6 +39,18 @@ module.exports = {
   async read(req, res){
     const users = await User.findAll();
     res.status(200).json(users);
+  },
+
+  async delete(req, res){
+    const { id } = req.params;
+    const buscaUser = await User.findOne({where: {id}});
+
+    if(!buscaUser){
+      res.status(401).json({message: 'Nenhum usuário encontrado!'});
+    }else{
+       await User.destroy({where:{id}});
+       res.status(200).json({success: true});
+    }
   }
 
 }
